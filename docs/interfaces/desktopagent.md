@@ -36,7 +36,7 @@ A Desktop Agent can be connected to one or more App Directories and will use dir
 Publishes context to other apps on the desktop.
 
 ```javascript
-agent.broadcast(context);
+ agent.broadcast(context);
 ```
 
 **Parameters:**
@@ -102,7 +102,7 @@ If a Context object is passed in, this object will be provided to the opened app
 If opening errors, it returns an `Error` with a string from the `OpenError` enumeration.
 
 ```javascript
-//no context
+    //no context
     agent.open('myApp');
     //with context
     agent.open('myApp', context);
