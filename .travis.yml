@@ -19,7 +19,7 @@ env:
 # Generate typedoc into the docs folder
 script:
   - npm run doc
-  - cp -R Specification-Draft.MD docs
+  - cp -R Specification-Draft.MD docs/specs.md
 
 deploy:
   provider: pages
