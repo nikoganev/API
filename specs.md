@@ -6,7 +6,6 @@ FDC3 API standards support the following goals:
 
 The role of FDC3 API standards is to establish a baseline interface for interoperability between applications.  Because FDC3 is largely an agreement between existing platforms and applications - standards should be optimized for ease of adoption rather than functional completeness.  Functionality absent from a FDC3 specification is in no way commentary its importance.
 
-
 # 1. Components
 ## 1.1 Desktop Agent
 A Desktop Agent is a desktop component (or aggregate of components) that serves as a launcher and message router (broker) for applications in its domain.  A Desktop Agent can be connected to one or more App Directories and will use directories for application identity and discovery. Typically, a Desktop Agent will contain the proprietary logic of a given platform, handling functionality like explicit application interop workflows where security, consistency, and implementation requirements are proprietary.  
@@ -18,8 +17,6 @@ Examples of Desktop Agents include:
 - ThomsonReuters Eikon
 
 Desktop Agents expose an FDC3 standard API to applications they have launched.  When an App is launched by a Desktop Agent and is given access to the Agent's API to interoperate, it is running in that Desktop Agent's *context*. 
-
-
 
 ![Desktop Agent - Standards Schematic](/images/api-1.png)
 
@@ -116,18 +113,23 @@ There are a wide range of workflows where decoupled intents and/or context passi
     }
 ```
 ![Upgrading Connection to Remote API](/images/api-3.png)
+
 ## 2.3 Register an Intent
 Applications need to let the system know the Intents they can support.  Typically, this is done via registration with the App Directory.  It is also possible for Intents to be registered at the application level as well to support ad-hoc registration which may be helpful at development time.  While, dynamic registration is not part of this specification, a Desktop Agent agent may choose to support any number of registration paths.
+
 ### 2.3.1 Compliance with Intent Standards
 Intents represent a contract with expected behavior if an app asserts that it supports the intent.  Where this contract is enforcable by schema (for example, return object types),the FDC3 API implementation should enforce compliance and return an error if the interface is not met.  
 
 It is expected that App Directories will also curate listed apps and ensure that they are complying with declared intents.
 
 Like FDC3 Context Data, the Intent schemas need to be versioned.  Desktop Agents will be responsible to declare which version of the Intent schema they are using.   Applications may also assert a specific version requirement when raising an Intent.  Version negotation may be supported by a given Desktop Agent.
+
 ## 2.4 Send/broadcast context  
 On the financial desktop, applications often want to broadcast context to any number of applications.  Context sharing needs to support concepts of different groupings of applications as well as data privacy concerns.  Each Desktop Agent will have its own rules for supporting these features.  
+
 # 3. Resolvers
 Intents functionality is dependent on resolver functionality to map the intent to a specific App.  This will often require end-user input.  Resolution can either be performed by the Desktop Agent (raising UI to pick the desired App for the intent) or by the app launching the intent - in which case the calling App will handle the resolution itself (using the resolve API below) and then invoke an explicit Intent object.
+
 # 4. APIs
 The APIs are defined in TypeScript in the [src](/src), with documentation generated in the [docs](/docs) folder.
 
