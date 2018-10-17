@@ -1,4 +1,5 @@
 *.js
 .vscode
 node_modules
-docs
+package-lock.json
+docs/ts

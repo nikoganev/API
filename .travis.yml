@@ -18,8 +18,10 @@ env:
 
 # Generate typedoc into the docs folder
 script:
-  - npm run doc
-  - cp -R Specification-Draft.MD docs/specs.md
+  - npm install -g yarn
+  - yarn install
+  - yarn test
+  - yarn run doc
 
 deploy:
   provider: pages
