@@ -5,7 +5,7 @@
 
 Welcome to the FDC3 API Standard repository.
 
-See the [specification draft](http://blog.session.it/API/specs.html) for the current working documentation, and the <a href="https://finosfoundation.atlassian.net/wiki/spaces/FDC3" target="_blank">FDC3 Confluence page</a> for further information.
+See the [specification draft](http://fdc3-api.github.io/specs.html) for the current working documentation, and the <a href="https://finosfoundation.atlassian.net/wiki/spaces/FDC3" target="_blank">FDC3 Confluence page</a> for further information.
 
 Checkout the complete [API definitions](ts/README.md).
 
