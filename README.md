@@ -9,7 +9,23 @@ Visit the [documentation website](http://blog.session.it/API) for more info.
 ## Release
 The FDC3 API is released under the [FINOS NPMJS Organisation](npmjs.com/org/symphonyoss) (currently `npmjs.com/org/symphonyoss` - in transition to `npmjs.com/org/finos`).
 
+On every commit, [semantic release](https://semantic-release.gitbook.io/semantic-release/) will be executed by Travis CI and - based on the commit message - will decide to trigger a release or not.
 
+A release consists of:
+- A version
+- A `CHANGELOG.md` file
+- A tag on GitHub
+- An new NPM package version (published on `npmjs.org/org/finos`)
+
+### Release setup
+Travis CI must be configured with the following environment variables:
+- `GH_TOKEN`, used to create tags on GitHub
+- `NPM_TOKEN`, used to publish the npm package
+
+You can setup variables [using semantic-release-cli](https://semantic-release.gitbook.io/semantic-release/usage/ci-configuration#automatic-setup-with-semantic-release-cli),  [Travis Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-Settings) or with the [travis CLI](https://github.com/travis-ci/travis.rb#env).
+
+### Advanced configurations
+Semantic release allows [additional configurations](https://semantic-release.gitbook.io/semantic-release/usage/plugins) to customise the release flow.
 
 ## Run locally
 To run the website documentation locally, please follow the steps below.

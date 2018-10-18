@@ -38,6 +38,6 @@ deploy:
   local-dir: docs
   target_branch: gh-pages
   on:
+    # TODO - disable master branch when ready
     branch: master
-    # TODO - Enable when ready for release
-    # tags: true
+    tags: true
