@@ -7,3 +7,4 @@ docs/ts
 docs/.sass-cache/
 docs/_site/
 .DS_Store
+docs/.jekyll-metadata

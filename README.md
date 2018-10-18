@@ -20,6 +20,8 @@ mkdir -p ~/.rvm/src && cd ~/.rvm/src && rm -rf ./rvm && \
 git clone --depth 1 https://github.com/rvm/rvm.git && \
 cd rvm && ./install
 rvm install 2.5.2
+which bundle #Should return a .rvm sub-path
+which ruby #Should return a .rvm sub-path
 ```
 
 ### Install gems needed for jekyll
@@ -28,14 +30,13 @@ git clone https://github.com/pages-themes/slate
 cd slate
 rm -rf .bundle
 ./script/bootstrap
+gem install jekyll-theme-slate
+gem install jekyll-seo-tag
+gem install jekyll-watch
 ```
 
 # Run jekyll on other project
 ```
 cd ../API/docs
-gem install jekyll-theme-slate
-gem install jekyll-seo-tag
-gem install jekyll-watch
-
-jekyll serve
+jekyll serve --incremental
 ```
