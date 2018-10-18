@@ -9,6 +9,8 @@ Visit the [documentation website](http://blog.session.it/API) for more info.
 ## Release
 The FDC3 API is released under the [FINOS NPMJS Organisation](npmjs.com/org/symphonyoss) (currently `npmjs.com/org/symphonyoss` - in transition to `npmjs.com/org/finos`).
 
+
+
 ## Run locally
 To run the website documentation locally, please follow the steps below.
 

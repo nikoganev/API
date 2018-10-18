@@ -23,6 +23,9 @@ script:
   - yarn test
   - yarn run doc
   - sed -i "s/\[\[tag\]\]/$TRAVIS_TAG/g" docs/_config.yml
+  # TODO - remove items below
+  - echo $TRAVIS_TAG
+  - cat docs/_config.yml
 
 deploy:
   provider: pages
