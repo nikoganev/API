@@ -1,3 +1,5 @@
+theme: jekyll-theme-slate
+
 title: FINOS FDC3 API specifications
 description: The documentation website for the FINOS FDC3 API specifications
 
