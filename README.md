@@ -23,15 +23,19 @@ rvm install 2.5.2
 ```
 
 ### Install gems needed for jekyll
+```
 git clone https://github.com/pages-themes/slate
 cd slate
 rm -rf .bundle
 ./script/bootstrap
+```
 
 # Run jekyll on other project
+```
 cd ../API/docs
 gem install jekyll-theme-slate
 gem install jekyll-seo-tag
 gem install jekyll-watch
 
 jekyll serve
+```
