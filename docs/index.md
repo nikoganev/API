@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # FDC3 API Standard
 
 [![npm version](https://badge.fury.io/js/hubot-symphony.svg)](https://badge.fury.io/js/hubot-symphony)
