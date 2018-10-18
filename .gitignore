@@ -6,3 +6,4 @@ docs/ts
 .bundle/
 docs/.sass-cache/
 docs/_site/
+.DS_Store
