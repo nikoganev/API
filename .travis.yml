@@ -22,6 +22,7 @@ script:
   - yarn install
   - yarn test
   - yarn run doc
+  - sed -i 's/\[\[tag\]\]/$TRAVIS_TAG/g' docs/_config.yml
 
 deploy:
   provider: pages
@@ -34,4 +35,4 @@ deploy:
   local-dir: docs
   target_branch: gh-pages
   on:
-    branch: master
+    tags: true
