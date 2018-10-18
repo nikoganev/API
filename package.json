@@ -1,5 +1,5 @@
 {
-  "name": "fdc3-api",
+  "name": "@finos/fdc3-api",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/FDC3/API.git",

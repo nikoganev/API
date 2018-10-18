@@ -5,16 +5,15 @@
 
 Visit the [documentation website](http://blog.session.it/API) for more info.
 
+## Release
+The FDC3 API is released under the [FINOS NPMJS Organisation](npmjs.com/org/symphonyoss) (currently `npmjs.com/org/symphonyoss` - in transition to `npmjs.com/org/finos`).
+
 ## Run locally
 To run the website documentation locally, please follow the steps below.
 
-### Get rid or ruby and rbenv (MacOS)
-```
-brew remove ruby
-brew remove rbenv
-```
+### Install Ruby (MacOS)
 
-### Install RVM (MacOS)
+It is strongly advised to use RVM or RBenv to install Ruby; below are the steps to install RVM on MacOS.
 ```
 mkdir -p ~/.rvm/src && cd ~/.rvm/src && rm -rf ./rvm && \
 git clone --depth 1 https://github.com/rvm/rvm.git && \
@@ -25,7 +24,9 @@ which ruby #Should return a .rvm sub-path
 ```
 
 ### Install gems needed for jekyll
+
 ```
+cd /tmp
 git clone https://github.com/pages-themes/slate
 cd slate
 rm -rf .bundle
