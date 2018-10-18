@@ -22,8 +22,7 @@ script:
   - yarn install
   - yarn test
   - yarn run doc
-  - TRAVIS_TAG=blah ; sed -i "s/\[\[tag\]\]/$TRAVIS_TAG/g" docs/_config.yml
-  - cat docs/_config.yml
+  - sed -i "s/\[\[tag\]\]/$TRAVIS_TAG/g" docs/_config.yml
 
 deploy:
   provider: pages
